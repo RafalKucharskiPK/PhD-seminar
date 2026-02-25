@@ -1,6 +1,15 @@
 # PhD Research Skills in Computer Science — Course (10 Lectures)
 
-A practical course for 1st–2nd year PhD students in Computer Science focused on learning how to *do science*: formulate research questions, identify gaps, design and run experiments, write papers, navigate peer review, plan publication strategy, pursue funding, structure a thesis, and work responsibly amid modern challenges (AI/LLMs, peer-review crisis, predatory venues, retractions).
+A practical course for 1st–2nd year PhD students in Computer Science focused on learning how to *do science*: 
+*formulate research questions, 
+*identify gaps, 
+* design and run experiments,
+* write papers,
+* navigate peer review,
+* plan publication strategy,
+* pursue funding,
+* structure a thesis, and
+* work responsibly amid modern challenges (AI/LLMs, peer-review crisis, predatory venues, retractions).
 
 ---
 
@@ -18,42 +27,49 @@ By the end of the course, students should be able to:
 - Choose venues and build a **publication/communication strategy**
 - Write **cover letters**, **rebuttals**, and **reply-to-reviewers**
 - Draft **research proposals**, plan a **PhD thesis**, and apply **research integrity + AI/LLM best practices**
+- Write compelling and mature **Individual Research Plan**.
 
 ---
 
 ## Format
 
-- **10 lectures**
-- Each lecture includes: a theme, discussion topics, and a tangible **deliverable**
+**10 lectures** - on-site at WMiI JU.
+- Each lecture includes: a theme, discussion topics
 - Designed to be iterative: deliverables can build toward a real submission (work-in-progress paper/proposal)
+
+> 1st year PhDs listen and try to contribute,
+> 
+> 2nd year contribute (obligatory), discuss and present their research bits.
 
 ---
 
-## Lecture Plan (10)
+## Lecture Plan
 
-### 1) What “Doing Science” Means in CS (and how PhDs succeed)
+### 1) What “Doing Science” Means (and how PhDs succeed)
+
 **Agenda**
-- What counts as a contribution in CS (theory, systems, ML, HCI, SE, security, etc.)
-- The PhD as a sequence of hypotheses, artifacts, and papers
+- What is _science/research/innovation/teaching/R&D_
+- What counts as a contribution (theory, systems, ML, HCI, SE, security, etc.)
+- The PhD as a sequence of hypotheses, results, and papers - forming a solid, coherent contribution.
 - Research types: exploratory vs confirmatory; empirical vs theoretical; artifact-building vs explanatory
 - Tractability, novelty vs usefulness, and “why now?”
 - Research workflow habits (reading, note-taking, lab notebooks, versioning)
 
 **Deliverable**
-- **1-page research identity draft**: area, core curiosity, what you can build/measure/prove
+- **Individual Research Plan**: area, core curiosity, what you can build/measure/prove
 
 ---
 
 ### 2) From Curiosity to Research Questions (RQs) and Falsifiable Claims
 **Agenda**
 - Turning ideas into precise RQs (descriptive, causal, mechanism, design, comparative)
-- Hypotheses, assumptions, and threat models (common in CS/ML)
+- Hypotheses, assumptions, aims and objectives.
 - Operationalization: variables, metrics, baselines, decision criteria
 - Scoping and feasibility; smallest publishable unit vs long-term vision
 - Pitfalls: non-testable RQs, tautologies, benchmark chasing, “apply X to Y” without insight
 
 **Deliverable**
-- **3 candidate RQs**, each with: contribution type + 1-paragraph evaluation plan
+- **Write solid RQs / hypotheses**, 
 
 ---
 
@@ -64,6 +80,7 @@ By the end of the course, students should be able to:
 - Gap mapping: missing pieces, contradictions, hidden assumptions
 - Related work narratives: problem-centric vs method-centric vs application-centric
 - Tracking system: paper matrix (problem, method, data, evaluation, claims, limitations)
+- using AI/LLMs, vibe-reading
 
 **Deliverable**
 - **Structured related-work table** + a **gap statement**
@@ -77,13 +94,14 @@ By the end of the course, students should be able to:
 - Positioning: contribution claim vs novelty claim vs significance claim
 - Common CS contribution patterns: “We show / We build / We measure / We explain / We unify”
 - Avoiding overstatement; writing limitations without weakening the paper
+- Visuals: Methodology at glance, figures.
 
 **Deliverable**
-- Draft **Problem + Setting + Contributions** section (1–2 pages)
+- **Identify couple of interesting Methodology at Glance, some from A* some from Science/Nature**
 
 ---
 
-### 5) Experimental Design for CS/ML/Systems (and statistical common sense)
+### 5) Experimental Design  (and statistical common sense)
 **Agenda**
 - Controls, baselines, ablations, hyperparameters, compute budgets
 - Reproducibility checklist: seeds, code/data release, environment capture, reporting
@@ -103,6 +121,7 @@ By the end of the course, students should be able to:
 - Variance and practical vs statistical significance
 - Negative results and failure analysis as contributions
 - Writing results so reviewers cannot misread your claims
+- Seaborn etc.
 
 **Deliverable**
 - **2–3 publication-ready figures/tables** + captions + a short results narrative per item
@@ -176,3 +195,5 @@ Students compile a research portfolio across the course:
 - 12-month venue plan + public pitch
 - Rebuttal template + mock rebuttal
 - Proposal/thesis plan + AI-use policy
+
+*** Deliverable: Individual Research Plan **
