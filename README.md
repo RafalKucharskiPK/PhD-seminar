@@ -1,8 +1,8 @@
 # PhD Research Skills in Computer Science — Course (10 Lectures)
 
 A practical course for 1st–2nd year PhD students in Computer Science focused on learning how to *do science*: 
-*formulate research questions, 
-*identify gaps, 
+* formulate research questions, 
+* identify gaps, 
 * design and run experiments,
 * write papers,
 * navigate peer review,
@@ -41,6 +41,8 @@ By the end of the course, students should be able to:
 > 
 > 2nd year contribute (obligatory), discuss and present their research bits.
 
+**Deliverable**: *Individual Research Plan* https://science.phd.uj.edu.pl/en_GB/individual_research_plan
+
 ---
 
 ## Lecture Plan
@@ -54,9 +56,11 @@ By the end of the course, students should be able to:
 - Research types: exploratory vs confirmatory; empirical vs theoretical; artifact-building vs explanatory
 - Tractability, novelty vs usefulness, and “why now?”
 - Research workflow habits (reading, note-taking, lab notebooks, versioning)
+- Hype and viral posts vs selling idea vs solid scientific contribution 
 
-**Deliverable**
-- **Individual Research Plan**: area, core curiosity, what you can build/measure/prove
+
+
+> **Reading/Homework:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapters _Introduction_ & _Getting Started_
 
 ---
 
@@ -69,7 +73,9 @@ By the end of the course, students should be able to:
 - Pitfalls: non-testable RQs, tautologies, benchmark chasing, “apply X to Y” without insight
 
 **Deliverable**
-- **Write solid RQs / hypotheses**, 
+- **Write solid RQs / hypotheses**
+
+> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Hypotheses, Questions, and Evidence_ 
 
 ---
 
@@ -84,6 +90,10 @@ By the end of the course, students should be able to:
 
 **Deliverable**
 - **Structured related-work table** + a **gap statement**
+
+> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Reading and Reviewing_ 
+
+> **Homework:** Ask LLM-of your choice what is the research gap and whether your problem actually fills this gap. Ask it to select 5 best papers to refer. 
 
 ---
 
@@ -109,6 +119,10 @@ By the end of the course, students should be able to:
 - Statistics essentials: effect sizes, confidence intervals, multiple comparisons, p-hacking traps
 - Threats to validity: construct/internal/external + how to write them credibly
 
+
+
+> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Experimentation_ 
+
 **Deliverable**
 - **1-page experiment plan**: datasets/benchmarks, baselines, ablations, metrics, acceptance criteria
 
@@ -126,6 +140,9 @@ By the end of the course, students should be able to:
 **Deliverable**
 - **2–3 publication-ready figures/tables** + captions + a short results narrative per item
 
+> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Graphs, Figures and Tables_ 
+
+
 ---
 
 ### 7) Paper Writing: IMRaD vs “Nature-style” and how to choose
@@ -138,6 +155,8 @@ By the end of the course, students should be able to:
 
 **Deliverable**
 - **Title + abstract + outline** (headings + 1–2 bullets each)
+
+> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Writing a Papper_ 
 
 ---
 
@@ -181,12 +200,12 @@ By the end of the course, students should be able to:
 
 ---
 
-## Suggested Assessment (Portfolio-Based)
+## Assessment (Portfolio-Based)
 
 Students compile a research portfolio across the course:
 
-- Research identity (1 page)
-- 3 RQs + evaluation sketches
+- Research background and problem statement (1 page)
+- 3 Research Questions / Hypotheses
 - Related work table + gap statement
 - Problem/setting/contributions draft
 - Experiment plan
@@ -196,4 +215,4 @@ Students compile a research portfolio across the course:
 - Rebuttal template + mock rebuttal
 - Proposal/thesis plan + AI-use policy
 
-*** Deliverable: Individual Research Plan **
+** Deliverable: Individual Research Plan **
