@@ -1,4 +1,10 @@
-# PhD Research Skills in Computer Science — Course (10 Lectures)
+# PhD Research Skills in Computer Science 
+
+## Course (10 Lectures)
+
+Rafał Kucharski, WMiI UJ rafal.kucharski@uj.ed.pl
+
+---
 
 A practical course for 1st–2nd year PhD students in Computer Science focused on learning how to *do science*: 
 * formulate research questions, 
@@ -60,7 +66,9 @@ By the end of the course, students should be able to:
 
 
 
-> **Reading/Homework:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapters _Introduction_ & _Getting Started_
+ **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapters _Introduction_ & _Getting Started_
+
+ **Homework:** watch one episode of [Czytamy Nature](https://www.youtube.com/watch?v=7gwPG8x9M3c&list=PLuqpwpkBmbAn3lA7tY9lO3LaUOaRkAq1A) or something similar in your lagnauge of choice.
 
 ---
 
@@ -70,12 +78,13 @@ By the end of the course, students should be able to:
 - Hypotheses, assumptions, aims and objectives.
 - Operationalization: variables, metrics, baselines, decision criteria
 - Scoping and feasibility; smallest publishable unit vs long-term vision
-- Pitfalls: non-testable RQs, tautologies, benchmark chasing, “apply X to Y” without insight
+- Pitfalls: non-testable RQs, tautologies, benchmark chasing
+- Significance, novelty, contribution
 
 **Deliverable**
-- **Write solid RQs / hypotheses**
+- Write solid RQs / hypotheses for your PhD
 
-> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Hypotheses, Questions, and Evidence_ 
+**Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Hypotheses, Questions, and Evidence_ 
 
 ---
 
@@ -91,9 +100,11 @@ By the end of the course, students should be able to:
 **Deliverable**
 - **Structured related-work table** + a **gap statement**
 
-> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Reading and Reviewing_ 
+ **Reading:** 
+ - [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Reading and Reviewing_ 
 
-> **Homework:** Ask LLM-of your choice what is the research gap and whether your problem actually fills this gap. Ask it to select 5 best papers to refer. 
+**Homework:** 
+ - Ask LLM-of your choice what is the research gap and whether your problem actually fills this gap. Ask it to select 5 best papers to refer. 
 
 ---
 
@@ -107,7 +118,10 @@ By the end of the course, students should be able to:
 - Visuals: Methodology at glance, figures.
 
 **Deliverable**
-- **Identify couple of interesting Methodology at Glance, some from A* some from Science/Nature**
+- Identify couple of interesting Methodology at Glance, some from A* some from Science/Nature
+
+**Homework:**
+- Read the [AlphaFold paper](https://doi.org/10.1038/s41586-021-03819-2) - see if it is written well enough to get a Nobel - do you see a Nobel potential just from reading this?
 
 ---
 
@@ -119,9 +133,8 @@ By the end of the course, students should be able to:
 - Statistics essentials: effect sizes, confidence intervals, multiple comparisons, p-hacking traps
 - Threats to validity: construct/internal/external + how to write them credibly
 
-
-
-> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Experimentation_ 
+**Reading:** 
+- [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Experimentation_ 
 
 **Deliverable**
 - **1-page experiment plan**: datasets/benchmarks, baselines, ablations, metrics, acceptance criteria
@@ -140,7 +153,8 @@ By the end of the course, students should be able to:
 **Deliverable**
 - **2–3 publication-ready figures/tables** + captions + a short results narrative per item
 
-> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Graphs, Figures and Tables_ 
+**Reading:** 
+- [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Graphs, Figures and Tables_ 
 
 
 ---
@@ -156,7 +170,8 @@ By the end of the course, students should be able to:
 **Deliverable**
 - **Title + abstract + outline** (headings + 1–2 bullets each)
 
-> **Reading:** [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Writing a Papper_ 
+**Reading:**
+- [Writing for Computer Science](https://link.springer.com/book/10.1007/978-1-4471-6639-9) - chapter _Writing a Papper_ 
 
 ---
 
@@ -167,6 +182,7 @@ By the end of the course, students should be able to:
 - Open science: preprints, code release timing, reproducibility badges
 - Communicating your work: website, social, blog posts, talks, posters
 - Ethical persuasion: framing without hype; handling interest responsibly
+- IF vs CORE ranking vs true science
 
 **Deliverable**
 - **12-month venue plan** + a **1-paragraph public pitch** of the work
@@ -183,6 +199,9 @@ By the end of the course, students should be able to:
 
 **Deliverable**
 - **Rebuttal template** + a **mock rebuttal** to sample reviews
+
+**Homework:** 
+- Read selected rebuttals on OpenReview from A* conference from your field and identify the dynamics.
 
 ---
 
