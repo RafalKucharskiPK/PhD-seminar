@@ -1,6 +1,6 @@
 # PhD Research Skills in Computer Science 
 
-## Course (10 Lectures)
+## Seminar (10 Lectures + Workshops)
 
 Rafał Kucharski, WMiI UJ rafal.kucharski@uj.ed.pl
 
