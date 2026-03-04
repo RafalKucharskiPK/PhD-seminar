@@ -182,6 +182,7 @@ By the end of the course, students should be able to:
 - Open science: preprints, code release timing, reproducibility badges
 - Communicating your work: website, social, blog posts, talks, posters
 - Ethical persuasion: framing without hype; handling interest responsibly
+- Ambition vs Risk vs PhD delivery.
 - IF vs CORE ranking vs true science
 
 **Deliverable**
@@ -234,4 +235,4 @@ Students compile a research portfolio across the course:
 - Rebuttal template + mock rebuttal
 - Proposal/thesis plan + AI-use policy
 
-** Deliverable: Individual Research Plan **
+and condense it into `Individual Research Plan` meeting the internal regulations of Doctoral School.
