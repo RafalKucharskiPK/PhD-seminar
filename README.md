@@ -72,6 +72,12 @@ By the end of the course, students should be able to:
 
 ---
 
+### 2) Abstract - the lens of the good research
+
+[abstract.md](abstract.md)
+
+---
+
 ### 2) From Curiosity to Research Questions (RQs) and Falsifiable Claims
 **Agenda**
 - Turning ideas into precise RQs (descriptive, causal, mechanism, design, comparative)
