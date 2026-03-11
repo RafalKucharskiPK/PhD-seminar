@@ -17,7 +17,7 @@ A high-quality academic abstract in top scientific journals follows a fairly sta
 
 ⸻
 
-#### The Canonical Abstract Template (for PhD Training)
+#### The Canonical Abstract Template
 
 * Sentence 1–2: Context
 * Sentence 3: Research gap
