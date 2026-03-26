@@ -1,30 +1,31 @@
-# Finding the Gap, Reviewing Literature, and Positioning Your ML Paper
+# Finding the Gap, Reviewing Literature, and Positioning Your Paper
 
 ## Audience
-CS / ML students writing conference papers.
+PhD students writing research papers.
 
 ## Goal
 Learn how to:
-1. find a real research gap,
-2. write a literature review that synthesizes instead of listing papers,
-3. position your contribution against prior work.
+1. find a **real**  and research gap,
+2. to an **open and significant** research problem,
+3. write a literature review that synthesizes instead of listing papers,
+4. position your contribution against prior work.
 
 ---
-## 1. What counts as a research gap in ML/CS?
+## 1. What counts as a research gap?
 
 A **research gap** is not "nobody did exactly my dataset + my model."
 A gap is a **meaningful limitation or unresolved question** in prior work.
 
-In ML, good gaps usually come from one of these:
+In CS, good gaps usually come from one of these:
 
-| Gap type | ML-style question | Example |
+| Gap type | CS-style question | Example |
 |---|---|---|
-| Problem gap | What part of the problem is still not solved? | Existing MARL methods do not handle non-stationary mixed traffic well. |
+| Problem gap | What part of the problem is still not solved? | Existing MARL methods do not handle non-stationary well. |
 | Assumption gap | What unrealistic assumption do prior papers make? | Prior work assumes centralized training signals or full observability. |
 | Evaluation gap | What is not tested rigorously enough? | Methods are evaluated only on toy benchmarks, not realistic urban networks. |
-| Comparison gap | What important baseline or ablation is missing? | Papers compare against weak baselines and omit decentralized alternatives. |
+| Comparison gap | What important baseline or ablation is missing? | Papers compare against weak baselines and omit other alternatives. |
 | Scalability gap | What breaks when the setting becomes realistic? | Performance degrades when the number of agents or graph size grows. |
-| Robustness gap | What happens under noise, shift, or perturbation? | Methods are not tested under demand fluctuations or partial observability. |
+| Robustness gap | What happens under noise, shift, or perturbation? | Methods are not tested under input fluctuations or partial observability. |
 | Theory gap | What is not explained formally? | Empirical improvements exist, but convergence behavior is not understood. |
 
 ### Bad gap
@@ -60,7 +61,7 @@ Example:
 
 ---
 
-## 3. A gap formula that works in ML papers
+## 3. A gap formula that works in CS papers
 
 Use this pattern:
 
@@ -71,7 +72,7 @@ Example:
 
 ---
 
-## 4. Literature review in ML: synthesize, do not enumerate
+## 4. Literature review: synthesize, do not enumerate
 
 A weak ML background section looks like this:
 
@@ -142,7 +143,7 @@ Examples:
 
 ---
 
-## 7. Contribution ladder for ML papers
+## 7. Contribution ladder for CS papers
 
 State contribution at 3 levels:
 
@@ -156,9 +157,9 @@ A strong paper usually has all 3.
 
 ---
 
-## 8. CARS for ML introductions
+## 8. CaRS for ML introductions
 
-Use **CARS = Create A Research Space**.
+Use **CaRS = Create a Research Space**.
 
 | Move | What it does | ML-style example |
 |---|---|---|
