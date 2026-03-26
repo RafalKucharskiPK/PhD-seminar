@@ -31,3 +31,8 @@ indicate that the visual quality of GASP is comparable to state-of-the-art metho
 FID scores and using the Gaussian grouping mechanism more than doubles the rendering
 speed. Our findings demonstrate that high-fidelity physical simulations can be achieved without
 the need for differentiable simulators or mesh-based proxies.
+
+# 6
+
+Preference-alignment methods such as RLHF are used to make large language models (LLMs) more helpful and safe, but they can also induce unintended behavioral tendencies, including forms of reward hacking. Although prior work has documented such emergent effects at the behavioral level, the internal mechanisms by which alignment training produces them remain poorly understood. In this work, we investigate whether these behaviors can be explained as updates concentrated on specific internal representations, which we call assistant personas. We analyze the circuits associated with these representations and study their causal role through targeted interventions. Our results show that ablating persona-related circuits can suppress particular side effects of alignment training while largely preserving the model’s general capabilities, whereas amplifying these circuits makes the corresponding behaviors more pronounced. These findings suggest that at least some emergent alignment behaviors are mechanistically localized, opening the door to more precise, predictable, and controllable interventions aimed at making LLMs better aligned with human preferences.<img width="451" height="218" alt="image" src="https://github.com/user-attachments/assets/30d105d3-a24d-469d-bd5c-7c6d41ddd13d" />
+
