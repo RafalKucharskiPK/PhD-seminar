@@ -85,6 +85,16 @@ By the end of the course, students should be able to:
 
 ---
 
+
+### 4) Methods, Experimental Design, and Evaluation 
+
+[method.md](method.md)
+
+---
+
+
+
+
 ### 2) From Curiosity to Research Questions (RQs) and Falsifiable Claims
 **Agenda**
 - Turning ideas into precise RQs (descriptive, causal, mechanism, design, comparative)
