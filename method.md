@@ -111,12 +111,6 @@ Reviewers often ask:
 - diversity,
 - comparability to prior work.
 
-## Benchmark checklist
-- [ ] Is this a recognized benchmark or clearly motivated custom environment?
-- [ ] Does it reflect the claim I want to test?
-- [ ] Does it contain enough variation in scale/difficulty?
-- [ ] Can I compare against prior work on it?
-- [ ] If custom, have I explained why standard benchmarks are insufficient?
 
 ## Common mistake
 Using only one narrow benchmark and making a broad claim.
@@ -129,7 +123,7 @@ Using only one narrow benchmark and making a broad claim.
 
 ---
 
-# 6. Baselines: the most important design choice
+# 6. Baselines
 
 Weak baseline selection is one of the fastest ways to lose reviewer trust.
 
@@ -161,10 +155,10 @@ Compare against:
 
 ---
 
-# 7. Metrics: measure what your claim actually says
+# 7. Metrics
 
-A metric is not just a number.  
-It is the operational definition of success.
+A metric measure what your claim actually says.  
+
 
 ## Examples by claim
 | Claim | Possible metrics |
@@ -182,17 +176,9 @@ Use:
 - a few secondary metrics,
 - metrics aligned with the actual application.
 
-## Example
-For route choice:
-- primary: mean travel time,
-- secondary: variance, total system travel time, convergence speed.
-
-## Common mistake
-Claiming “better coordination” but measuring only final reward without any coordination-related evidence.
-
 ---
 
-# 8. Experimental protocol: fairness matters
+# 8. Design protocol
 
 The protocol tells the reviewer whether the comparison is fair.
 
@@ -275,7 +261,7 @@ Ablations should test the causal story of your method.
 
 # 11. Robustness and stress tests
 
-Top ML papers increasingly test not only average-case performance but also failure modes.
+Top papers increasingly test not only average-case performance but also failure modes.
 
 ## Useful robustness checks
 - different seeds,
@@ -311,25 +297,7 @@ Put long parameter tables in the appendix if needed.
 ## Good sentence
 > Full implementation details, hyperparameter ranges, and environment settings are provided in Appendix A.
 
----
-
-# 13. Threats to validity
-
-Strong papers acknowledge what the study does not prove.
-
-## Common threats in ML papers
-| Threat type | Example |
-|---|---|
-| Benchmark validity | toy tasks may not reflect real deployments |
-| Internal validity | gains may come from better tuning rather than the method |
-| External validity | results may not generalize to other datasets or scales |
-| Metric validity | metric may not capture the practical goal |
-| Compute validity | method may perform well only with much higher compute |
-
-## Good limitation statement
-> Our experiments focus on simulated mixed-traffic settings and therefore do not establish real-world deployment performance.
-
-This strengthens the paper if stated honestly.
+Image, Docker, Capsule, ...
 
 ---
 
@@ -360,21 +328,8 @@ For more empirical benchmark papers:
 
 ---
 
-# 15. CARS-style logic for Methods
 
-Even the Methods section has an argument structure.
-
-## It should answer
-1. What exactly are we testing?
-2. How do we test it?
-3. Why is this test fair and informative?
-
-That means your Methods section is not only descriptive.  
-It is argumentative.
-
----
-
-# 16. Reviewer-driven design
+# Reviewer-driven design
 
 A useful way to design experiments is to imagine the reviewer questions first.
 
@@ -393,7 +348,7 @@ Design the study so these questions are already answered.
 
 ---
 
-# 17. Fill-in templates for students
+# Fill-in templates for students
 
 ## A. Claim to experiment
 > We claim that **[method]** improves **[property]** relative to **[baseline]**.  
@@ -411,25 +366,11 @@ Design the study so these questions are already answered.
 ## E. Ablation statement
 > To isolate the effect of each component, we evaluate variants that remove **[A]**, **[B]**, and **[C]** while keeping the rest of the pipeline fixed.
 
----
 
-# 18. One bad example and one better example
-
-## Weak Methods summary
-> We evaluate our method on several environments and compare it with existing approaches. We use common metrics and standard settings.
-
-Problems:
-- unclear environments,
-- unclear baselines,
-- unclear fairness,
-- no evidence design.
-
-## Better Methods summary
-> We evaluate the proposed decentralized routing method on two large-scale urban traffic simulators and three smaller control benchmarks to test both realism and controlled comparison. We compare against IPPO, MAPPO, QMIX, VDN, and shortest-path routing, covering standard actor-critic, value-decomposition, and non-learning baselines. Performance is measured using mean travel time, total system travel time, convergence speed, and variance across 10 random seeds. All methods use the same candidate route sets, interaction budgets, and evaluation protocol. Additional ablations remove communication and reward shaping to isolate the source of performance gains.
 
 ---
 
-# 19. Fast checklist before submission
+# Fast checklist before submission
 
 - [ ] My experiments directly test my main claims
 - [ ] I clearly define the task, inputs, outputs, and assumptions
@@ -444,50 +385,6 @@ Problems:
 - [ ] I disclose important implementation details
 - [ ] I acknowledge the main limitations of the study
 
----
 
-# 20. In-class exercise
-
-Choose one planned paper or project and fill in the following:
-
-## Research claim
-> Our paper claims that ...
-
-## Task
-> The task is ...
-
-## Benchmarks
-> We evaluate on ...
-
-## Baselines
-> We compare against ...
-
-## Metrics
-> We measure ...
-
-## Fairness protocol
-> All methods use ...
-
-## Ablations
-> We remove / vary ...
-
-## Robustness test
-> We additionally test ...
-
-## Limitation
-> Our evaluation still does not show ...
-
----
-
-# Key takeaway
-
-A strong ML paper is not only a new method.
-
-It is a well-designed argument where:
-- claims are explicit,
-- evidence is aligned,
-- baselines are fair,
-- metrics are meaningful,
-- experiments are reproducible.
 
 
