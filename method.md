@@ -111,4 +111,383 @@ Reviewers often ask:
 - diversity,
 - comparability to prior work.
 
+## Benchmark checklist
+- [ ] Is this a recognized benchmark or clearly motivated custom environment?
+- [ ] Does it reflect the claim I want to test?
+- [ ] Does it contain enough variation in scale/difficulty?
+- [ ] Can I compare against prior work on it?
+- [ ] If custom, have I explained why standard benchmarks are insufficient?
+
+## Common mistake
+Using only one narrow benchmark and making a broad claim.
+
+### Weak
+> Our method is better for multi-agent coordination.
+
+### Better
+> On six cooperative and mixed-motive benchmarks spanning 4 to 100 agents, our method improves return and remains stable under increasing non-stationarity.
+
+---
+
+# 6. Baselines: the most important design choice
+
+Weak baseline selection is one of the fastest ways to lose reviewer trust.
+
+## Good baselines should be
+- relevant,
+- strong,
+- representative,
+- fairly tuned.
+
+## Baseline categories
+| Type | Purpose | Example |
+|---|---|---|
+| Standard baseline | Compare to common prior methods | PPO, DQN, MAPPO, QMIX |
+| Closest prior work | Compare to the most similar published method | direct comparator paper |
+| Simple heuristic | Show whether ML is actually needed | shortest path, greedy, random |
+| Ablated version | Show the value of your own component | your method without communication |
+| Oracle / upper bound | Provide reference if applicable | centralized or full-information variant |
+
+## Reviewer question
+> Why did you compare only against weak baselines?
+
+If a strong relevant baseline exists and is omitted, reviewers will notice.
+
+## Baseline rule
+Compare against:
+1. the strongest relevant prior method,
+2. the most standard method in the area,
+3. a simple non-ML or naive baseline when appropriate.
+
+---
+
+# 7. Metrics: measure what your claim actually says
+
+A metric is not just a number.  
+It is the operational definition of success.
+
+## Examples by claim
+| Claim | Possible metrics |
+|---|---|
+| Better performance | accuracy, reward, return, F1, BLEU, travel time |
+| Faster learning | sample efficiency, area under learning curve, steps to threshold |
+| More stable | variance across seeds, confidence intervals, training collapse rate |
+| More robust | performance under perturbation, domain shift, noise |
+| Scales better | runtime, memory, reward vs number of agents |
+| Better calibrated / safer | calibration error, violation rate, collision rate |
+
+## Good metric practice
+Use:
+- one or two primary metrics,
+- a few secondary metrics,
+- metrics aligned with the actual application.
+
+## Example
+For route choice:
+- primary: mean travel time,
+- secondary: variance, total system travel time, convergence speed.
+
+## Common mistake
+Claiming “better coordination” but measuring only final reward without any coordination-related evidence.
+
+---
+
+# 8. Experimental protocol: fairness matters
+
+The protocol tells the reviewer whether the comparison is fair.
+
+## Must specify
+- train/test split or evaluation episodes,
+- number of random seeds,
+- compute budget,
+- hyperparameter tuning policy,
+- stopping criterion,
+- model selection criterion,
+- whether baselines use their best known settings,
+- whether all methods see the same data and budget.
+
+## Essential rule
+Do not give your method advantages that baselines do not receive.
+
+### Example of unfairness
+- your model tuned for 100 runs,
+- baselines run with default settings,
+- different training budgets,
+- different action spaces,
+- different observations.
+
+That is not a valid comparison.
+
+## Minimal protocol statement
+> All methods were trained under the same interaction budget, evaluated over 10 random seeds, and selected using the same validation protocol.
+
+---
+
+# 9. Random seeds, variance, and statistical reliability
+
+In ML, single-run results are rarely convincing.
+
+## Good practice
+- report mean and standard deviation or confidence intervals,
+- run multiple seeds,
+- show variance where relevant,
+- avoid cherry-picking best runs.
+
+## In many ML settings
+3 seeds is weak,  
+5 is acceptable,  
+10 is much stronger for noisy training.
+
+## Better reporting
+> Our method improves mean return by 14% over MAPPO across 10 seeds and reduces variance in final performance.
+
+Not:
+> Our best run outperforms the baseline.
+
+---
+
+# 10. Ablation studies
+
+Ablations test which part of your method actually matters.
+
+Without ablations, reviewers may think:
+> The gain comes from extra parameters, more compute, or a hidden design choice.
+
+## Typical ablation questions
+- What happens if component X is removed?
+- What happens if communication is disabled?
+- What if reward shaping is removed?
+- What if architecture depth changes?
+- What if the regularizer weight is zero?
+
+## Good ablation table
+| Variant | Change | Result | Interpretation |
+|---|---|---|---|
+| Full model | none | best | full method |
+| No module A | remove communication | lower performance | A contributes to coordination |
+| No module B | remove regularizer | less stable | B stabilizes training |
+| Larger model control | more parameters only | similar | gains are not only from size |
+
+## Rule
+Ablations should test the causal story of your method.
+
+---
+
+# 11. Robustness and stress tests
+
+Top ML papers increasingly test not only average-case performance but also failure modes.
+
+## Useful robustness checks
+- different seeds,
+- noisy observations,
+- partial observability,
+- out-of-distribution test tasks,
+- more agents / larger graphs,
+- changed demand / perturbation,
+- missing communication,
+- adversarial or non-stationary conditions.
+
+## Why this matters
+A method that works only in one narrow clean setup is often not convincing.
+
+---
+
+# 12. Reproducibility and implementation details
+
+A reviewer should be able to understand enough to reproduce your setup.
+
+## Include
+- architecture summary,
+- important hyperparameters,
+- optimizer and learning rate,
+- training steps / epochs,
+- hardware if relevant,
+- software stack if relevant,
+- release plans for code and benchmarks if possible.
+
+## Do not overload the main text
+Put long parameter tables in the appendix if needed.
+
+## Good sentence
+> Full implementation details, hyperparameter ranges, and environment settings are provided in Appendix A.
+
+---
+
+# 13. Threats to validity
+
+Strong papers acknowledge what the study does not prove.
+
+## Common threats in ML papers
+| Threat type | Example |
+|---|---|
+| Benchmark validity | toy tasks may not reflect real deployments |
+| Internal validity | gains may come from better tuning rather than the method |
+| External validity | results may not generalize to other datasets or scales |
+| Metric validity | metric may not capture the practical goal |
+| Compute validity | method may perform well only with much higher compute |
+
+## Good limitation statement
+> Our experiments focus on simulated mixed-traffic settings and therefore do not establish real-world deployment performance.
+
+This strengthens the paper if stated honestly.
+
+---
+
+# 14. Canonical structure of a Methods section in ML
+
+A practical structure for conference papers:
+
+## 3. Method
+### 3.1 Problem formulation
+### 3.2 Proposed approach
+### 3.3 Training objective / algorithm
+
+## 4. Experimental setup
+### 4.1 Benchmarks / datasets / environments
+### 4.2 Baselines
+### 4.3 Evaluation metrics
+### 4.4 Training protocol and implementation details
+### 4.5 Ablations and robustness tests
+
+For more empirical benchmark papers:
+
+## 3. Experimental design
+### 3.1 Research questions
+### 3.2 Tasks and datasets
+### 3.3 Compared methods
+### 3.4 Metrics
+### 3.5 Evaluation protocol
+
+---
+
+# 15. CARS-style logic for Methods
+
+Even the Methods section has an argument structure.
+
+## It should answer
+1. What exactly are we testing?
+2. How do we test it?
+3. Why is this test fair and informative?
+
+That means your Methods section is not only descriptive.  
+It is argumentative.
+
+---
+
+# 16. Reviewer-driven design
+
+A useful way to design experiments is to imagine the reviewer questions first.
+
+## Typical reviewer attacks
+- Why these baselines?
+- Why these benchmarks?
+- Why this metric?
+- Is the gain statistically reliable?
+- Is the method just bigger or more tuned?
+- What part of the method matters?
+- Does it scale?
+- Does it generalize?
+- Is the comparison fair?
+
+Design the study so these questions are already answered.
+
+---
+
+# 17. Fill-in templates for students
+
+## A. Claim to experiment
+> We claim that **[method]** improves **[property]** relative to **[baseline]**.  
+> To test this, we evaluate on **[benchmarks]** using **[metrics]** under **[protocol]**.
+
+## B. Baseline justification
+> We compare against **[baseline 1]**, **[baseline 2]**, and **[baseline 3]** because they represent **[standard family]**, **[closest prior work]**, and **[simple reference]**, respectively.
+
+## C. Metric justification
+> We use **[primary metric]** as the main measure of **[goal]**, and report **[secondary metrics]** to capture **[stability / efficiency / robustness]**.
+
+## D. Protocol statement
+> All methods are trained with the same **[budget / data / seeds / stopping rule]** and evaluated under the same **[test conditions]**.
+
+## E. Ablation statement
+> To isolate the effect of each component, we evaluate variants that remove **[A]**, **[B]**, and **[C]** while keeping the rest of the pipeline fixed.
+
+---
+
+# 18. One bad example and one better example
+
+## Weak Methods summary
+> We evaluate our method on several environments and compare it with existing approaches. We use common metrics and standard settings.
+
+Problems:
+- unclear environments,
+- unclear baselines,
+- unclear fairness,
+- no evidence design.
+
+## Better Methods summary
+> We evaluate the proposed decentralized routing method on two large-scale urban traffic simulators and three smaller control benchmarks to test both realism and controlled comparison. We compare against IPPO, MAPPO, QMIX, VDN, and shortest-path routing, covering standard actor-critic, value-decomposition, and non-learning baselines. Performance is measured using mean travel time, total system travel time, convergence speed, and variance across 10 random seeds. All methods use the same candidate route sets, interaction budgets, and evaluation protocol. Additional ablations remove communication and reward shaping to isolate the source of performance gains.
+
+---
+
+# 19. Fast checklist before submission
+
+- [ ] My experiments directly test my main claims
+- [ ] I clearly define the task, inputs, outputs, and assumptions
+- [ ] My benchmark choice is justified
+- [ ] I include strong and relevant baselines
+- [ ] I explain why each baseline is included
+- [ ] My metrics match the claims I make
+- [ ] My protocol is fair across methods
+- [ ] I report multiple seeds and variance
+- [ ] I include ablations for key components
+- [ ] I include at least one robustness or stress test
+- [ ] I disclose important implementation details
+- [ ] I acknowledge the main limitations of the study
+
+---
+
+# 20. In-class exercise
+
+Choose one planned paper or project and fill in the following:
+
+## Research claim
+> Our paper claims that ...
+
+## Task
+> The task is ...
+
+## Benchmarks
+> We evaluate on ...
+
+## Baselines
+> We compare against ...
+
+## Metrics
+> We measure ...
+
+## Fairness protocol
+> All methods use ...
+
+## Ablations
+> We remove / vary ...
+
+## Robustness test
+> We additionally test ...
+
+## Limitation
+> Our evaluation still does not show ...
+
+---
+
+# Key takeaway
+
+A strong ML paper is not only a new method.
+
+It is a well-designed argument where:
+- claims are explicit,
+- evidence is aligned,
+- baselines are fair,
+- metrics are meaningful,
+- experiments are reproducible.
+
 
