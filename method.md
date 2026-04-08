@@ -1,21 +1,25 @@
-# Methods, Experimental Design, and Evaluation for ML Papers
+# Methods, Experimental Design, and Evaluation 
 
-## Seminar sheet for CS / ML students
-Audience: students writing empirical papers for NeurIPS, ICML, ICLR, AAAI, AISTATS, ACL, EMNLP, CVPR, ECCV, KDD, WWW.
+## Seminar sheet for CS  students
+
+Audience: PhD students writing CS papers
 
 ## Goal
-Learn how to turn a research idea into a convincing empirical study:
-- define the claim,
-- choose the right baselines,
-- select metrics,
-- design fair experiments,
+
+Turn a research idea into a convincing study:
+- define the **claim**,
+- choose the right **baselines**,
+- select **metrics**,
+- design fair **experiments**,
 - write the Methods section clearly.
 
 ---
 
 # 1. What is the Methods section doing?
 
-The Methods section is not just a technical description of your model.
+The Methods section is not just a technical description of your model - it is for the reader to **believe in your claim**.
+
+> Intro: "I do this (important and new)" --> Method: "I really do this" --> Results: "See?"
 
 Its job is to make the reader believe that:
 1. your method is clearly defined,
@@ -23,7 +27,7 @@ Its job is to make the reader believe that:
 3. your comparisons are fair,
 4. your evidence is reproducible.
 
-A strong ML paper does not only ask:
+A strong paper does not only ask:
 > Is the method new?
 
 It also asks:
@@ -33,16 +37,16 @@ It also asks:
 
 # 2. Start from claims, not from code
 
-Every ML paper makes claims.  
-Your experiments should be designed to test those claims directly.
+Almost every paper makes claims (hypotheses).  
+Your experiments should be designed to test/support those claims directly.
 
-## Typical ML claims
+## Typical claims
 | Claim type | Example |
 |---|---|
-| Performance claim | Our method achieves higher return / accuracy / reward |
+| Performance claim | Our method achieves higher accuracy  |
 | Efficiency claim | Our method learns faster or with fewer samples |
 | Robustness claim | Our method performs better under noise, shift, perturbation |
-| Scalability claim | Our method handles larger graphs, more agents, longer horizons |
+| Scalability claim | Our method handles more agents |
 | Component claim | Component X is responsible for the gain |
 | Generalization claim | The method transfers to new tasks / seeds / environments |
 | Theory-linked claim | The empirical behavior matches a theoretical property |
@@ -56,19 +60,19 @@ If you cannot answer that, the study design is not ready.
 
 ---
 
-# 3. Core anatomy of an ML evaluation
+# 3. Core anatomy of an evaluation
 
-Most empirical ML papers should clearly specify these seven elements:
+Most empirical ML papers should clearly specify:
 
 | Element | Main question |
 |---|---|
 | Task | What problem are you solving? |
 | Data / environment | On what dataset, simulator, or benchmark? |
-| Method | What exactly is your approach? |
+| **Method** | What exactly is your approach? |
 | Baselines | Compared to what? |
 | Metrics | How is success measured? |
-| Protocol | Under what training and evaluation setup? |
-| Ablations / robustness | Why does it work, and does it hold up? |
+| Setup | Under what training and evaluation setup? |
+| Ablations / robustness | Why does it work? |
 
 ---
 
@@ -85,16 +89,8 @@ A Methods section should begin by stating the task precisely.
 ## Example
 > We study decentralized route choice in mixed traffic. At each episode, each autonomous vehicle selects one route from a discrete candidate set connecting its origin and destination. Agents observe local information and execute policies independently at test time.
 
-That is much better than:
-> We study traffic routing with RL.
 
-## For ML students
-Be explicit about:
-- supervised / unsupervised / RL / MARL,
-- offline vs online,
-- centralized training vs decentralized execution,
-- full vs partial observability,
-- single-shot vs sequential decision making.
+## Be explicit 
 
 ---
 
@@ -115,10 +111,4 @@ Reviewers often ask:
 - diversity,
 - comparability to prior work.
 
-## Benchmark checklist
-```md
-[ ] Is this a recognized benchmark or clearly motivated custom environment?
-[ ] Does it reflect the claim I want to test?
-[ ] Does it contain enough variation in scale/difficulty?
-[ ] Can I compare against prior work on it?
-[ ] If custom, have I explained why standard benchmarks are insufficient?
+
