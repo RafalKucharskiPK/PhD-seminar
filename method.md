@@ -1,7 +1,7 @@
-# Methods, Experimental Design, and Evaluation for ML Papers
+# Methods, Experimental Design, and Evaluation for Papers
 
-## Seminar sheet for CS / ML students
-Audience: students writing empirical papers for NeurIPS, ICML, ICLR, AAAI, AISTATS, ACL, EMNLP, CVPR, ECCV, KDD, WWW.
+## Seminar sheet for CS students
+Audience: PhD students writing scientific papers
 
 ## Goal
 Learn how to:
@@ -57,9 +57,9 @@ A strong Method section must answer four questions:
 
 ---
 
-# 4. Canonical structure of a Method section in ML
+# 4. Canonical structure of a Method section 
 
-A common structure for ML conference papers is:
+A common structure is:
 
 ## 3. Method
 ### 3.1 Problem formulation
@@ -246,7 +246,7 @@ For many ML papers, the Method section becomes much clearer if you add:
 ## Use pseudocode when
 - the algorithm has multiple stages,
 - the training loop is non-standard,
-- the update rule is difficult to explain in prose.
+- the update rule is difficult to explain in writing.
 
 ## Rule
 Figures and algorithms should clarify the logic, not repeat the text.
@@ -267,7 +267,7 @@ Those belong in **Experimental Setup** or **Results**.
 
 A clean paper separates:
 - **Method**: what you propose
-- **Setup**: how you test it
+- **Experiment**: how you test it
 - **Results**: what you found
 
 ---
@@ -598,45 +598,6 @@ Problems:
 
 ---
 
-# 28. In-class exercise
-
-Choose one planned paper or project and fill in:
-
-## Problem
-> We study ...
-
-## Inputs / outputs
-> The input is ... and the output is ...
-
-## Method idea
-> Our method works by ...
-
-## Main novelty
-> Unlike prior work, we ...
-
-## Training objective
-> We optimize ...
-
-## Main claim
-> We claim that ...
-
-## Benchmarks
-> We evaluate on ...
-
-## Baselines
-> We compare against ...
-
-## Metrics
-> We measure ...
-
-## Ablation
-> We test the role of ...
-
-## Limitation
-> Our study still does not show ...
-
----
-
 # Key takeaway
 
 A strong ML paper has three clean layers:
@@ -644,4 +605,4 @@ A strong ML paper has three clean layers:
 2. **Experimental design** — how you test it,
 3. **Evaluation** — what evidence you obtain.
 
-Students should learn to write them separately.
+You should learn to write them separately.
