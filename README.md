@@ -92,7 +92,7 @@ By the end of the course, students should be able to:
 
 ---
 
-### 5) Results 
+### 5) Results and Conclusions
 
 [results.md](results.md)
 
